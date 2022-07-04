@@ -11,7 +11,7 @@ import 'typed_examples/video_room.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Permission.camera.request();
+ // await Permission.camera.request();
 
   runApp(MaterialApp(
     initialRoute: '/',

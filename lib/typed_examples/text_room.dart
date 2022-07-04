@@ -27,7 +27,7 @@ class _TextRoomExampleState extends State<TypedTextRoom> {
     ws = WebSocketJanusTransport(url: servermap['janus_ws']);
     janusClient = JanusClient(
         withCredentials: true,
-        apiSecret: "SecureIt",
+        // apiSecret: "SecureIt",
         transport: ws,
         iceServers: [
           RTCIceServer(
