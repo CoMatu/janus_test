@@ -240,9 +240,8 @@ class _VideoCallV2ExampleState extends State<TypedVideoCallV2Example> {
                   onPressed: () async {
                     await localMediaSetup();
                     await publishVideo.handleRemoteJsep(jsep);
-                    Navigator.of(context, rootNavigator: true)
-                        .pop(incomingDialog);
-                    Navigator.of(context, rootNavigator: true).pop(callDialog);
+                    // Navigator.of(context).pop(incomingDialog);
+                    //  Navigator.of(context, rootNavigator: true).pop(callDialog);
                     await publishVideo.acceptCall();
                   },
                   child: Text('Accept')),
