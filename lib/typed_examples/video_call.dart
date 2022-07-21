@@ -27,11 +27,23 @@ class _VideoCallV2ExampleState extends State<TypedVideoCallV2Example> {
 
   Future<void> localMediaSetup() async {
     await _localRenderer.initialize();
-    MediaStream? temp = await publishVideo.initializeMediaDevices();
+/*     MediaStream? temp = await publishVideo.initializeMediaDevices();
     setState(() {
       localStream = temp;
     });
     _localRenderer.srcObject = localStream;
+
+
+ */
+    var devices = await navigator.mediaDevices.enumerateDevices();
+    Map<String, dynamic> constrains = {};
+    devices.map((e) => e.kind.toString()).forEach((element) {
+      String dat = element.split('input')[0];
+      dat = dat.split('output')[0];
+      constrains.putIfAbsent(dat, () => true);
+    });
+    localStream =
+        await publishVideo.initializeMediaDevices(mediaConstraints: constrains);
   }
 
   makeCall() async {
