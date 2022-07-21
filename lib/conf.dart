@@ -10,7 +10,8 @@ var servers = [
 Map<String, String> servermap = {
   'janus_ws': 'wss://112-24.ru:8198/',
   //'janus_ws': 'wss://janus.conf.meetecho.com/ws',
-  'janus_rest': 'https://janus.conf.meetecho.com/janus',
+  'janus_rest': 'https://112-24.ru:8288/janus',
+  //'janus_rest': 'https://janus.conf.meetecho.com/janus',
   'onemandev_master_ws': 'wss://master-janus.onemandev.tech/websocket',
   'onemandev_master_rest': 'https://master-janus.onemandev.tech/rest',
   'onemandev_unified_rest': 'https://unified-janus.onemandev.tech/rest',
